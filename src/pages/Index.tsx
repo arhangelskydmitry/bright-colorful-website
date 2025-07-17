@@ -29,7 +29,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-vibrant-orange via-producer-purple to-deep-purple">
+    <div className="min-h-screen bg-gradient-to-br from-primary-purple via-secondary-purple to-deep-purple">
       {/* Header */}
       <header className="bg-white/10 backdrop-blur-md sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
@@ -38,37 +38,42 @@ const Index = () => {
               🎵 PRODUCER CENTER
             </div>
             <div className="hidden md:flex space-x-6">
-              <a href="#services" className="text-white hover:text-neon-green transition-colors">Услуги</a>
-              <a href="#team" className="text-white hover:text-neon-green transition-colors">Команда</a>
-              <a href="#cases" className="text-white hover:text-neon-green transition-colors">Кейсы</a>
-              <a href="#contact" className="text-white hover:text-neon-green transition-colors">Контакты</a>
+              <a href="#services" className="text-white hover:text-light-purple transition-colors">Услуги</a>
+              <a href="#team" className="text-white hover:text-light-purple transition-colors">Команда</a>
+              <a href="#cases" className="text-white hover:text-light-purple transition-colors">Кейсы</a>
+              <a href="#contact" className="text-white hover:text-light-purple transition-colors">Контакты</a>
             </div>
-            <Button className="bg-neon-green text-dark-gray hover:bg-neon-green/90">
+            <Button className="bg-light-purple text-dark-purple hover:bg-light-purple/90">
               Связаться
             </Button>
           </nav>
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="py-20 px-4 text-center text-white">
-        <div className="container mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            Создаем музыку
-            <span className="block bg-gradient-to-r from-neon-green to-electric-blue bg-clip-text text-transparent">
-              будущего
-            </span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
-            Полный цикл музыкального производства от идеи до мирового успеха
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-neon-green text-dark-gray hover:bg-neon-green/90 text-lg px-8 py-3">
-              Начать проект
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-dark-gray text-lg px-8 py-3">
-              Смотреть портфолио
-            </Button>
+      {/* Hero Section with Studio Background */}
+      <section className="relative py-20 px-4 text-center text-white overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{backgroundImage: 'url("/img/880555ee-5eb9-4284-ab9b-137cb18d74ce.jpg")'}}></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-deep-purple/80 to-transparent"></div>
+        
+        <div className="container mx-auto relative z-10">
+          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/10">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+              Создаем музыку
+              <span className="block bg-gradient-to-r from-light-purple to-purple-accent bg-clip-text text-transparent">
+                будущего
+              </span>
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+              Полный цикл музыкального производства от идеи до мирового успеха
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-light-purple text-dark-purple hover:bg-light-purple/90 text-lg px-8 py-3">
+                Начать проект
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-dark-purple text-lg px-8 py-3">
+                Смотреть портфолио
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -84,8 +89,8 @@ const Index = () => {
               <Card key={index} className="bg-white/10 border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="p-2 bg-neon-green/20 rounded-lg">
-                      <Icon name={service.icon} size={24} className="text-neon-green" />
+                    <div className="p-2 bg-light-purple/20 rounded-lg">
+                      <Icon name={service.icon} size={24} className="text-light-purple" />
                     </div>
                     <CardTitle className="text-white">{service.title}</CardTitle>
                   </div>
@@ -109,12 +114,12 @@ const Index = () => {
             {teamMembers.map((member, index) => (
               <Card key={index} className="bg-white/10 border-white/20 text-center hover:bg-white/20 transition-all duration-300">
                 <CardHeader>
-                  <div className="w-20 h-20 bg-gradient-to-br from-neon-green to-electric-blue rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <div className="w-20 h-20 bg-gradient-to-br from-light-purple to-purple-accent rounded-full mx-auto mb-4 flex items-center justify-center">
                     <Icon name="User" size={32} className="text-white" />
                   </div>
                   <CardTitle className="text-white">{member.name}</CardTitle>
                   <CardDescription className="text-white/80">{member.role}</CardDescription>
-                  <Badge className="bg-vibrant-orange text-white">{member.specialty}</Badge>
+                  <Badge className="bg-primary-purple text-white">{member.specialty}</Badge>
                 </CardHeader>
               </Card>
             ))}
@@ -131,40 +136,40 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all duration-300">
               <CardHeader>
-                <div className="h-40 bg-gradient-to-br from-vibrant-orange to-producer-purple rounded-lg mb-4 flex items-center justify-center">
+                <div className="h-40 bg-gradient-to-br from-primary-purple to-secondary-purple rounded-lg mb-4 flex items-center justify-center">
                   <Icon name="Play" size={48} className="text-white" />
                 </div>
                 <CardTitle className="text-white">Артист "Звезда"</CardTitle>
                 <CardDescription className="text-white/80">
                   Полная упаковка проекта: от записи альбома до видеоклипов и PR-кампании
                 </CardDescription>
-                <Badge className="bg-neon-green text-dark-gray">1M+ просмотров</Badge>
+                <Badge className="bg-light-purple text-dark-purple">1M+ просмотров</Badge>
               </CardHeader>
             </Card>
             
             <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all duration-300">
               <CardHeader>
-                <div className="h-40 bg-gradient-to-br from-electric-blue to-deep-purple rounded-lg mb-4 flex items-center justify-center">
+                <div className="h-40 bg-gradient-to-br from-purple-accent to-deep-purple rounded-lg mb-4 flex items-center justify-center">
                   <Icon name="Headphones" size={48} className="text-white" />
                 </div>
                 <CardTitle className="text-white">Группа "Ритм"</CardTitle>
                 <CardDescription className="text-white/80">
                   Создание песен под ключ, продвижение в социальных сетях и букинг туров
                 </CardDescription>
-                <Badge className="bg-neon-green text-dark-gray">100+ концертов</Badge>
+                <Badge className="bg-light-purple text-dark-purple">100+ концертов</Badge>
               </CardHeader>
             </Card>
             
             <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all duration-300">
               <CardHeader>
-                <div className="h-40 bg-gradient-to-br from-neon-green to-vibrant-orange rounded-lg mb-4 flex items-center justify-center">
+                <div className="h-40 bg-gradient-to-br from-light-purple to-primary-purple rounded-lg mb-4 flex items-center justify-center">
                   <Icon name="Award" size={48} className="text-white" />
                 </div>
                 <CardTitle className="text-white">Проект "Новая волна"</CardTitle>
                 <CardDescription className="text-white/80">
                   Цифровая дистрибуция, выпуск винила и радиопродвижение молодых исполнителей
                 </CardDescription>
-                <Badge className="bg-neon-green text-dark-gray">Топ-10 чартов</Badge>
+                <Badge className="bg-light-purple text-dark-purple">Топ-10 чартов</Badge>
               </CardHeader>
             </Card>
           </div>
@@ -181,7 +186,7 @@ const Index = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all duration-300">
                 <CardHeader className="text-center">
-                  <Icon name="Phone" size={32} className="text-neon-green mx-auto mb-4" />
+                  <Icon name="Phone" size={32} className="text-light-purple mx-auto mb-4" />
                   <CardTitle className="text-white">Телефон</CardTitle>
                   <CardDescription className="text-white/80">+7 (495) 123-45-67</CardDescription>
                 </CardHeader>
@@ -189,14 +194,14 @@ const Index = () => {
               
               <Card className="bg-white/10 border-white/20 hover:bg-white/20 transition-all duration-300">
                 <CardHeader className="text-center">
-                  <Icon name="Mail" size={32} className="text-neon-green mx-auto mb-4" />
+                  <Icon name="Mail" size={32} className="text-light-purple mx-auto mb-4" />
                   <CardTitle className="text-white">Email</CardTitle>
                   <CardDescription className="text-white/80">info@producercenter.ru</CardDescription>
                 </CardHeader>
               </Card>
             </div>
             
-            <Button size="lg" className="bg-gradient-to-r from-vibrant-orange to-producer-purple text-white hover:from-producer-purple hover:to-deep-purple text-lg px-12 py-4">
+            <Button size="lg" className="bg-gradient-to-r from-primary-purple to-secondary-purple text-white hover:from-secondary-purple hover:to-deep-purple text-lg px-12 py-4">
               Обсудить проект
             </Button>
           </div>
@@ -204,7 +209,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-dark-gray/50 py-12 px-4">
+      <footer className="bg-dark-purple/50 py-12 px-4">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
@@ -231,9 +236,9 @@ const Index = () => {
             <div>
               <h4 className="font-semibold text-white mb-4">Социальные сети</h4>
               <div className="flex space-x-4">
-                <Icon name="Instagram" size={24} className="text-white/80 hover:text-neon-green cursor-pointer" />
-                <Icon name="Youtube" size={24} className="text-white/80 hover:text-neon-green cursor-pointer" />
-                <Icon name="Music" size={24} className="text-white/80 hover:text-neon-green cursor-pointer" />
+                <Icon name="Instagram" size={24} className="text-white/80 hover:text-light-purple cursor-pointer" />
+                <Icon name="Youtube" size={24} className="text-white/80 hover:text-light-purple cursor-pointer" />
+                <Icon name="Music" size={24} className="text-white/80 hover:text-light-purple cursor-pointer" />
               </div>
             </div>
           </div>

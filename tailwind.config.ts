@@ -62,13 +62,15 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Продюсерский центр цвета
-				'vibrant-orange': '#FF6B35',
-				'producer-purple': '#E91E63',
-				'deep-purple': '#9917B0',
-				'electric-blue': '#2C27F3',
-				'neon-green': '#FFEB3B',
-				'dark-gray': '#112121',
+				// Продюсерский центр цвета - фиолетовая схема
+				'primary-purple': '#9b87f5',
+				'secondary-purple': '#7E69AB',
+				'deep-purple': '#6E59A5',
+				'light-purple': '#D6BCFA',
+				'purple-accent': '#8B5CF6',
+				'dark-purple': '#1A1F2C',
+				'neon-purple': '#E5DEFF',
+				'vibrant-purple': '#D946EF',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
