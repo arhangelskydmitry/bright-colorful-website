@@ -61,7 +61,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Продюсерский центр цвета
+				'vibrant-orange': '#FF6B35',
+				'producer-purple': '#E91E63',
+				'deep-purple': '#9917B0',
+				'electric-blue': '#2C27F3',
+				'neon-green': '#FFEB3B',
+				'dark-gray': '#112121',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
