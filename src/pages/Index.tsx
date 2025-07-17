@@ -29,21 +29,21 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-purple via-secondary-purple to-deep-purple">
+    <div className="min-h-screen bg-gradient-to-br from-vibrant-purple via-electric-pink to-bright-magenta">
       {/* Header */}
-      <header className="bg-white/10 backdrop-blur-md sticky top-0 z-50">
+      <header className="bg-pure-white/20 backdrop-blur-md sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex justify-between items-center">
-            <div className="text-2xl font-bold text-white">
+            <div className="text-2xl font-bold text-pure-white">
               🎵 PRODUCER CENTER
             </div>
             <div className="hidden md:flex space-x-6">
-              <a href="#services" className="text-white hover:text-light-purple transition-colors">Услуги</a>
-              <a href="#team" className="text-white hover:text-light-purple transition-colors">Команда</a>
-              <a href="#cases" className="text-white hover:text-light-purple transition-colors">Кейсы</a>
-              <a href="#contact" className="text-white hover:text-light-purple transition-colors">Контакты</a>
+              <a href="#services" className="text-pure-white hover:text-soft-pink transition-colors">Услуги</a>
+              <a href="#team" className="text-pure-white hover:text-soft-pink transition-colors">Команда</a>
+              <a href="#cases" className="text-pure-white hover:text-soft-pink transition-colors">Кейсы</a>
+              <a href="#contact" className="text-pure-white hover:text-soft-pink transition-colors">Контакты</a>
             </div>
-            <Button className="bg-light-purple text-dark-purple hover:bg-light-purple/90">
+            <Button className="bg-pure-white text-vibrant-purple hover:bg-pure-white/90 font-semibold">
               Связаться
             </Button>
           </nav>
@@ -51,15 +51,15 @@ const Index = () => {
       </header>
 
       {/* Hero Section with Studio Background */}
-      <section className="relative py-20 px-4 text-center text-white overflow-hidden">
+      <section className="relative py-20 px-4 text-center text-pure-white overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{backgroundImage: 'url("/img/880555ee-5eb9-4284-ab9b-137cb18d74ce.jpg")'}}></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-deep-purple/80 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-deep-violet/80 to-transparent"></div>
         
         <div className="container mx-auto relative z-10">
-          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12 border border-white/10">
+          <div className="bg-pure-white/10 backdrop-blur-sm rounded-3xl p-12 border border-pure-white/20">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
               Создаем музыку
-              <span className="block bg-gradient-to-r from-light-purple to-purple-accent bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-soft-pink to-pure-white bg-clip-text text-transparent">
                 будущего
               </span>
             </h1>
@@ -67,10 +67,10 @@ const Index = () => {
               Полный цикл музыкального производства от идеи до мирового успеха
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-light-purple text-dark-purple hover:bg-light-purple/90 text-lg px-8 py-3">
+              <Button size="lg" className="bg-pure-white text-vibrant-purple hover:bg-pure-white/90 text-lg px-8 py-3 font-semibold">
                 Начать проект
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-dark-purple text-lg px-8 py-3">
+              <Button size="lg" variant="outline" className="border-pure-white text-pure-white hover:bg-pure-white hover:text-vibrant-purple text-lg px-8 py-3">
                 Смотреть портфолио
               </Button>
             </div>

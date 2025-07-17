@@ -62,15 +62,16 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Продюсерский центр цвета - фиолетовая схема
-				'primary-purple': '#9b87f5',
-				'secondary-purple': '#7E69AB',
-				'deep-purple': '#6E59A5',
-				'light-purple': '#D6BCFA',
-				'purple-accent': '#8B5CF6',
-				'dark-purple': '#1A1F2C',
-				'neon-purple': '#E5DEFF',
-				'vibrant-purple': '#D946EF',
+				// Продюсерский центр цвета - фиолетово-розово-белые насыщенные тона
+				'vibrant-purple': '#8B5CF6',
+				'electric-pink': '#EC4899',
+				'bright-magenta': '#F472B6',
+				'hot-pink': '#FF1493',
+				'pure-white': '#FFFFFF',
+				'soft-pink': '#FFB6C1',
+				'deep-violet': '#6366F1',
+				'neon-purple': '#A855F7',
+				'rose-accent': '#F97316',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
